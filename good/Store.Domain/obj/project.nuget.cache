@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dzxhNTMkVMB/h9Um5a49iJW6boHIIdkADX7U0Eemro9Mma9thqx60/muB1O+PYpo1d83JbLIhEXIrighUS0IrQ==",
+  "dgSpecHash": "NySPemOlLqceRQToE/63a85MFXnk+wGtVqNTqhmVQwgf4CHw5VJyYspMJPNWMF1OOGVHa3WeGDKffMgMobDruQ==",
   "success": true,
-  "projectFilePath": "/home/rlksx/dev/7182-master/domain-driven-disign/Store.Domain/Store.Domain.csproj",
+  "projectFilePath": "/home/rlksx/dev/domain-driven-design/good/Store.Domain/Store.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

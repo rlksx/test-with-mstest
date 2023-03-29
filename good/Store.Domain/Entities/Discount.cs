@@ -11,13 +11,14 @@ public class Discount : Entity
    public decimal Amount { get; private set; }
    public DateTime ExprireDate { get; private set; }
 
-   public bool IsValid() 
+   public bool IsValid()
     => DateTime.Compare(DateTime.Now, ExprireDate) < 0;
 
-    public decimal Valid() {
-        if(IsValid())
-            return Amount;
-        else
-            return 1;
-    }
+   public decimal Valid()
+   {
+      if (IsValid())
+         return Amount;
+      else
+         return 1;
+   }
 }

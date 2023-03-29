@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/rlksx/dev/7182-master/domain-driven-disign/Store.Domain/Store.Domain.csproj": {}
+    "/home/rlksx/dev/domain-driven-design/good/Store.Domain/Store.Domain.csproj": {}
   },
   "projects": {
-    "/home/rlksx/dev/7182-master/domain-driven-disign/Store.Domain/Store.Domain.csproj": {
+    "/home/rlksx/dev/domain-driven-design/good/Store.Domain/Store.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/rlksx/dev/7182-master/domain-driven-disign/Store.Domain/Store.Domain.csproj",
+        "projectUniqueName": "/home/rlksx/dev/domain-driven-design/good/Store.Domain/Store.Domain.csproj",
         "projectName": "Store.Domain",
-        "projectPath": "/home/rlksx/dev/7182-master/domain-driven-disign/Store.Domain/Store.Domain.csproj",
+        "projectPath": "/home/rlksx/dev/domain-driven-design/good/Store.Domain/Store.Domain.csproj",
         "packagesPath": "/home/rlksx/.nuget/packages/",
-        "outputPath": "/home/rlksx/dev/7182-master/domain-driven-disign/Store.Domain/obj/",
+        "outputPath": "/home/rlksx/dev/domain-driven-design/good/Store.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/rlksx/.nuget/NuGet/NuGet.Config"
