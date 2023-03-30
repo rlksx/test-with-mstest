@@ -50,7 +50,17 @@ public class OrderTests
    public void Dado_um_novo_pedido_sem_pruduto_o_mesmo_nao_deve_ser_adicionado()
    {
       var order = new Order(_customer, 10, null);
-      order.AddItem(null, 0);
+      order.AddItem(null, 10);
+      Assert.AreEqual(order.Items.Count(), 0);
+   }
+
+   [TestMethod]
+   [TestCategory("Domain")]
+
+   public void Dado_um_novo_item_com_quantidade_zero_ou_menor_o_mesmo_nao_deve_ser_adicionado()
+   {
+      var order = new Order(_customer, 10, null);
+      order.AddItem(_product, 0);
       Assert.AreEqual(order.Items.Count(), 0);
    }
 
@@ -70,13 +80,6 @@ public class OrderTests
       var order = new Order(_customer, 10, _expiredDiscount);
       order.AddItem(_product, 5);
       Assert.AreEqual(order.Total(), 60);
-   }
-
-   [TestMethod]
-   [TestCategory("Domain")]
-   public void Dado_um_novo_item_com_quantidade_zero_ou_menor_o_mesmo_nao_deve_ser_adicionado()
-   {
-      Assert.Fail();
    }
 
    [TestMethod]
