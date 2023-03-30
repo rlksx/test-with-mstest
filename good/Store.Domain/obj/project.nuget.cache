@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "NySPemOlLqceRQToE/63a85MFXnk+wGtVqNTqhmVQwgf4CHw5VJyYspMJPNWMF1OOGVHa3WeGDKffMgMobDruQ==",
+  "dgSpecHash": "ipx+0HuyqsTnJZI/UCvKdKDIp9MwIMYoYI82JhyvnkEUpeIAZ4VKHvViUxA3oF4un8Os5ayy5rzbhL+74OnFRA==",
   "success": true,
   "projectFilePath": "/home/rlksx/dev/domain-driven-design/good/Store.Domain/Store.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/rlksx/.nuget/packages/flunt/1.0.5/flunt.1.0.5.nupkg.sha512"
+  ],
   "logs": []
 }

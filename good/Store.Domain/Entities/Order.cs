@@ -2,10 +2,15 @@ using Store.Domain.Enums;
 
 namespace Store.Domain.Entities;
 
-public class Order
+public class Order : Entity
 {
    public Order(Customer customer, decimal deliveryFee, Discount discount)
    {
+      AddNotifications(new Flunt.Validations.Contract()
+         .Requires()
+         .IsNotNull(customer, "Customer", "Cliente inválido")
+      );
+
       Customer = customer;
       Date = DateTime.Now;
       Number = Guid.NewGuid().ToString().Substring(0, 8);
@@ -26,6 +31,9 @@ public class Order
    public void AddItem(Product product, int quantity)
    {
       var item = new OrderItem(product, quantity);
+
+      if(item.Valid) 
+         Items.Add(item);
    }
 
    public decimal Total()
@@ -48,5 +56,4 @@ public class Order
 
    public void Cancel()
       => Status = EOrderStatus.Canceled;
-   
 }
