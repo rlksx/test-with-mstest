@@ -95,6 +95,25 @@ public class OrderTests
    [TestCategory("Domain")]
    public void Dado_um_desconto_de_10_seu_valor_do_pedido_deve_ser_50()
    {
-      Assert.Fail();
+      var order = new Order(_customer, 10, _discount);
+      order.AddItem(_product, 5);
+      Assert.AreEqual(order.Total(), 50);
+   }
+
+   [TestMethod]
+   [TestCategory("Domain")]
+   public void Dada_uma_taxa_de_entrega_o_valor_do_pedido_deve_ser_60()
+   {
+      var order = new Order(_customer, 10, _discount);
+      order.AddItem(_product, 5);
+      Assert.AreEqual(order.Total(), 50);
+   }
+
+   [TestMethod]
+   [TestCategory("Domain")]
+   public void Dado_um_pedido_sem_cliente_o_mesmo_deve_ser_invalido()
+   {
+      var order = new Order(null, 10, _discount);
+      Assert.AreEqual(order.IsValid, false);
    }
 }
