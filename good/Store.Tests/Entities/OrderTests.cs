@@ -55,14 +55,16 @@ public class OrderTests
 
    [TestMethod]
    [TestCategory("Domain")]
-   public void Dado_um_novo_item_com_quantidade_zero_ou_menor_o_mesmo_nao_deve_ser_adicionado()
+   public void Dado_um_novo_pedido_valido_seu_total_deve_ser_50()
    {
-      Assert.Fail();
+      var order = new Order(_customer, 10, _discount);
+      order.AddItem(_product, 5);
+      Assert.AreEqual(order.Total(), 50);
    }
 
    [TestMethod]
    [TestCategory("Domain")]
-   public void Dado_um_novo_pedido_seu_total_deve_ser_50()
+   public void Dado_um_novo_item_com_quantidade_zero_ou_menor_o_mesmo_nao_deve_ser_adicionado()
    {
       Assert.Fail();
    }
