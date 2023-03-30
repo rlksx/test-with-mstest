@@ -1,4 +1,6 @@
 namespace Store.Domain.Entities;
+using Flunt.Notifications;
+using Flunt.Validations;
 
 public class OrderItem : Entity
 {
@@ -6,6 +8,13 @@ public class OrderItem : Entity
    {
       this.Quantity = quantity; 
       this.Price = product != null ? product.Price : 0;
+
+      AddNotifications(
+         new Contract<Notification>()
+            .Requires()
+            .IsNotNull(product, "Product", "Produto inválido")
+            .IsGreaterThan(quantity, 0, "Quantity", "Quantidade inválida")
+      );
    }
 
    public decimal Price { get; private set; }

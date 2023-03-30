@@ -1,7 +1,7 @@
 using Flunt.Notifications;
 
 namespace Store.Domain.Entities;
-public class Entity : Notifiable
+public class Entity : Notifiable<Notification>
 {
    public Guid Id { get; private set; }
    public Entity()
