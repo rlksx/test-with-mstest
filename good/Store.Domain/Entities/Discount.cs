@@ -14,7 +14,7 @@ public class Discount : Entity
    public bool IsValid()
     => DateTime.Compare(DateTime.Now, ExprireDate) < 0;
 
-   public decimal Valid()
+   public decimal Value()
    {
       if (IsValid())
          return Amount;

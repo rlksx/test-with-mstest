@@ -1,8 +1,8 @@
 namespace Store.Domain.Entities;
 
-class Custumer : Entity
+public class Customer : Entity
 {
-   public Custumer(string name, string email)
+   public Customer(string name, string email)
    {
       Name = name;
       Email = email;

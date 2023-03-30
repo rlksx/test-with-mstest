@@ -1,10 +1,10 @@
 namespace Store.Domain.Entities;
 
-public class OrdenItem : Entity
+public class OrderItem : Entity
 {
-   public OrdenItem(int qunatity, Product product)
+   public OrderItem(Product product, int quantity)
    {
-      this.Quantity = qunatity; 
+      this.Quantity = quantity; 
       this.Price = product != null ? product.Price : 0;
    }
 
