@@ -8,6 +8,7 @@ public class OrderTests
    private readonly Customer _customer = new Customer("Order Test", "ordertest@gmail.com");
    private readonly Product _product = new Product("Produto 1", 10, true);
    private readonly Discount _discount = new Discount(10, DateTime.Now.AddDays(5));
+   private readonly Discount _expiredDiscount = new Discount(10, DateTime.Now.AddDays(-5));
 
    [TestMethod]
    [TestCategory("Domain")]
@@ -64,14 +65,16 @@ public class OrderTests
 
    [TestMethod]
    [TestCategory("Domain")]
-   public void Dado_um_novo_item_com_quantidade_zero_ou_menor_o_mesmo_nao_deve_ser_adicionado()
+   public void Dado_um_desconto_expirado_o_valor_do_pedido_deve_ser_60()
    {
-      Assert.Fail();
+      var order = new Order(_customer, 10, _expiredDiscount);
+      order.AddItem(_product, 5);
+      Assert.AreEqual(order.Total(), 60);
    }
 
    [TestMethod]
    [TestCategory("Domain")]
-   public void Dado_um_desconto_expirado_o_valor_do_pedido_deve_ser_60()
+   public void Dado_um_novo_item_com_quantidade_zero_ou_menor_o_mesmo_nao_deve_ser_adicionado()
    {
       Assert.Fail();
    }
