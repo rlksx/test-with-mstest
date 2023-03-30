@@ -48,7 +48,9 @@ public class OrderTests
    [TestCategory("Domain")]
    public void Dado_um_novo_pedido_sem_pruduto_o_mesmo_nao_deve_ser_adicionado()
    {
-      Assert.Fail();
+      var order = new Order(_customer, 10, null);
+      order.AddItem(null, 0);
+      Assert.AreEqual(order.Items.Count(), 0);
    }
 
    [TestMethod]
