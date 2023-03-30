@@ -29,7 +29,10 @@ public class OrderTests
    [TestCategory("Domain")]
    public void Dado_um_novo_pedido_seu_status_deve_ser_aguardando_entraga()
    {
-      Assert.Fail();
+      var order = new Order(_customer, 10, null);
+      order.AddItem(_product, 1);
+      order.Pay(20);
+      Assert.AreEqual(EOrderStatus.WaittingDelivery, order.Status);
    }
 
    [TestMethod]
